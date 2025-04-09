@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .green-tea-dark {
+    background-color: #4a7223; /* Dark Green */
+  }
+  
+  .green-tea-medium {
+    background-color: #799c4d; /* Medium Green */
+  }
+  
+  .green-tea-light {
+    background-color: #a5c765; /* Light Green */
+  }
+  
+  .green-tea-gradient {
+    background: linear-gradient(to left, #4a7223, #799c4d, #a5c765); /* Dark to Light Gradient */
+  }
+
+  .hover-green-tea-medium:hover {
+    background-color: #799c4d;
+  }
+
+  .text-green-tea-dark {
+    color: #4a7223;
+  }
+
+  .header-button {
+    @apply px-6 py-3 rounded-xl
+           bg-gradient-to-r from-amber-500/90 to-yellow-500/90
+           backdrop-blur-md text-white font-semibold
+           border border-amber-200/30
+           shadow-[0_8px_25px_rgba(245,158,11,0.3)]
+           hover:shadow-[0_10px_30px_rgba(245,158,11,0.5)]
+           hover:from-amber-500 hover:to-yellow-500
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5 cursor-pointer;
+  }
+}
